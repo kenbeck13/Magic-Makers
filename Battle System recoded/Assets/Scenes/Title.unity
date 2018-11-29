@@ -230,11 +230,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21f68182e30f54558be600a0e109fb34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player_name: 
-  player_max_health: 0
+  player_name: Aiden
+  player_max_health: 100
   player_current_health: 0
-  player_max_magic: 0
-  player_magic: 0
+  player_max_magic: 80
+  player_current_magic: 0
   player_defense: 0
   player_speed: 0
   player_spell_name: []
@@ -254,6 +254,7 @@ MonoBehaviour:
   player_air_level: 0
   player_light_level: 0
   player_dark_level: 0
+  level_up_requirements: 050000000a000000140000002800000050000000a0000000400100008002000000050000000a000000140000002800000050000000a0000000400100008002000000050000000a0000001400c12e0000
   player_fire_unlocks: 0000000000
   player_water_unlocks: 
   player_earth_unlocks: 
