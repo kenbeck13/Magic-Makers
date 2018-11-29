@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class EnemyInfo : MonoBehaviour {
 
-    public string[] enemy_name;
-    public int[] enemy_attack;
-    public int[] enemy_max_health;
-    public int[] enemy_speed;
-    public string[] enemy_attack_name_1;
-    public string[] enemy_attack_name_2;
+    public string enemy_name;
+    public int enemy_attack;
+    public int enemy_max_health;
+    public int enemy_speed;
+    public string enemy_attack_name_1;
+    public string enemy_attack_name_2;
 
 	// Use this for initialization
 	void Start () {
