@@ -113,6 +113,77 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &73724663
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 73724665}
+  - component: {fileID: 73724664}
+  m_Layer: 0
+  m_Name: Player1Info
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &73724664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 73724663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f68182e30f54558be600a0e109fb34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player_name: Aaron
+  player_max_health: 100
+  player_current_health: 0
+  player_max_magic: 80
+  player_current_magic: 0
+  player_defense: 0
+  player_speed: 0
+  player_spell_name: []
+  player_spell_element: []
+  player_spell_attack: 
+  player_spell_magic_cost: 
+  player_spell_special: []
+  player_fire_exp: 0
+  player_water_exp: 0
+  player_earth_exp: 0
+  player_air_exp: 0
+  player_light_exp: 0
+  player_dark_exp: 0
+  player_fire_level: 0
+  player_water_level: 0
+  player_earth_level: 0
+  player_air_level: 0
+  player_light_level: 0
+  player_dark_level: 0
+  level_up_requirements: 050000000a000000140000002800000050000000a0000000400100008002000000050000000a000000140000002800000050000000a0000000400100008002000000050000000a0000001400c12e0000
+  player_fire_unlocks: 0000000000
+  player_water_unlocks: 
+  player_earth_unlocks: 
+  player_air_unlocks: 
+  player_light_unlocks: 
+  player_dark_unlocks: 
+--- !u!4 &73724665
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 73724663}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &532073456
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,50 +261,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1524996352
+--- !u!1 &720120056
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1524996353}
-  - component: {fileID: 1524996354}
+  - component: {fileID: 720120058}
+  - component: {fileID: 720120057}
   m_Layer: 0
-  m_Name: GameInfo
+  m_Name: Player2Info
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1524996353
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1524996352}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1524996354
+--- !u!114 &720120057
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1524996352}
+  m_GameObject: {fileID: 720120056}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 21f68182e30f54558be600a0e109fb34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player_name: Aiden
-  player_max_health: 100
+  player_name: Beatrice
+  player_max_health: 110
   player_current_health: 0
-  player_max_magic: 80
+  player_max_magic: 70
   player_current_magic: 0
   player_defense: 0
   player_speed: 0
@@ -261,3 +319,115 @@ MonoBehaviour:
   player_air_unlocks: 
   player_light_unlocks: 
   player_dark_unlocks: 
+--- !u!4 &720120058
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 720120056}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1251777829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1251777831}
+  - component: {fileID: 1251777830}
+  m_Layer: 0
+  m_Name: Player3Info
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1251777830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1251777829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f68182e30f54558be600a0e109fb34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player_name: Cameron
+  player_max_health: 80
+  player_current_health: 0
+  player_max_magic: 100
+  player_current_magic: 0
+  player_defense: 0
+  player_speed: 0
+  player_spell_name: []
+  player_spell_element: []
+  player_spell_attack: 
+  player_spell_magic_cost: 
+  player_spell_special: []
+  player_fire_exp: 0
+  player_water_exp: 0
+  player_earth_exp: 0
+  player_air_exp: 0
+  player_light_exp: 0
+  player_dark_exp: 0
+  player_fire_level: 0
+  player_water_level: 0
+  player_earth_level: 0
+  player_air_level: 0
+  player_light_level: 0
+  player_dark_level: 0
+  level_up_requirements: 050000000a000000140000002800000050000000a0000000400100008002000000050000000a000000140000002800000050000000a0000000400100008002000000050000000a0000001400c12e0000
+  player_fire_unlocks: 0000000000
+  player_water_unlocks: 
+  player_earth_unlocks: 
+  player_air_unlocks: 
+  player_light_unlocks: 
+  player_dark_unlocks: 
+--- !u!4 &1251777831
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1251777829}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1524996352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1524996353}
+  m_Layer: 0
+  m_Name: GameInfo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1524996353
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1524996352}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
