@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class Spell : MonoBehaviour {
 
+	public string spell_element;
     public string spell_name;
     public int spell_damage;
-    public int spell_healing;
+	public int spell_healing;
+    public int spell_healing_percent;
     public int spell_cost;
     public string spell_damage_target;
     public string spell_healing_target;
     public string spell_special;
+	public float spell_special_chance;
     public bool isDesperation;
 
 

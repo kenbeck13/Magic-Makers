@@ -27,7 +27,7 @@ public class GameController : MonoBehaviour {
 
 	public Text newsText1, newsText2, newsText3, whoText, elementText, damageText,
     mpText, bonusText, player1HPText, player2HPText, player1MPText, player2MPText,
-    finalText, targetText, desperationText;
+    finalText, targetText, desperationText, p1SpellName1, p1SpellName2, p1SpellName3, p1SpellName4, p2SpellName1, p2SpellName2, p2SpellName3, p2SpellName4;
 
     public Button p1spell1, p1spell2, p1spell3, p2spell1, p2spell2, p2spell3,
     p1EnemyButton1, p1EnemyButton2, p1EnemyButton3, p2EnemyButton1, p2EnemyButton2, p2EnemyButton3;
@@ -48,16 +48,25 @@ public class GameController : MonoBehaviour {
 	bool attacked, p1Dead, p2Dead, e1Dead, e2Dead, e3Dead, e1Thawed, e2Thawed, e3Thawed,
     victory, loss, success1_1, success2_1, success1_2, success2_2, success1_3, success2_3, desperationUsed1, desperationUsed2;
 
-	float specialChance1, specialChance2;
+	float specialChance1, specialChance2, healingPercent1, healingPercent2;
 	public DamageSpawner e1DamageText, e2DamageText, e3DamageText, p1DamageText, p2DamageText;
 
 	// Use this for initialization
 	void Start () {
         spellInfoObject = GameObject.Find("Spell Info");
         spellInfo = spellInfoObject.GetComponent<SpellInfo>();
-        player1Spell1.spell_damage = spellInfo.player1Spell1.spell_damage;
+		player1Spell0 = spellInfo.player1Spell0;
+		player1Spell1 = spellInfo.player1Spell1;
+		player1Spell2 = spellInfo.player1Spell2;
+		player1Spell3 = spellInfo.player1Spell3;
+		player1Spell4 = spellInfo.player1Spell4;
 
-		DontDestroyOnLoad (this.gameObject);
+		player2Spell0 = spellInfo.player2Spell0;
+		player2Spell1 = spellInfo.player2Spell1;
+		player2Spell2 = spellInfo.player2Spell2;
+		player2Spell3 = spellInfo.player2Spell3;
+		player2Spell4 = spellInfo.player2Spell4;
+
 		elementText.text = (" ");
 		damageText.text = (" ");
 		mpText.text = (" ");
@@ -85,6 +94,38 @@ public class GameController : MonoBehaviour {
         e1Slider.value = enemy1HP;
         e2Slider.value = enemy2HP;
         e3Slider.value = enemy3HP;
+
+		p1SpellCost1 = player1Spell1.spell_cost;
+		p1SpellDamage1 = player1Spell1.spell_damage;
+		p1SpellName1.text = (player1Spell1.spell_name);
+
+
+		p1SpellCost2 = player1Spell2.spell_cost;
+		p1SpellDamage2 = player1Spell2.spell_damage;
+		p1SpellName2.text = (player1Spell2.spell_name);
+
+		p1SpellCost3 = player1Spell3.spell_cost;
+		p1SpellDamage3 = player1Spell3.spell_damage;
+		p1SpellName3.text = (player1Spell3.spell_name);
+
+		p1SpellDamage4 = player1Spell4.spell_damage;
+		p1SpellName4.text = (player1Spell4.spell_name);
+
+		p2SpellCost1 = player2Spell1.spell_cost;
+		p2SpellDamage1 = player2Spell1.spell_damage;
+		p2SpellName1.text = (player2Spell1.spell_name);
+
+		p2SpellCost2 = player2Spell2.spell_cost;
+		p2SpellDamage2 = player2Spell2.spell_damage;
+		p2SpellName2.text = (player2Spell2.spell_name);
+
+		p2SpellCost3 = player2Spell3.spell_cost;
+		p2SpellDamage3 = player2Spell3.spell_damage;
+		p2SpellName3.text = (player2Spell3.spell_name);
+
+		p2SpellDamage4 = player2Spell4.spell_damage;
+		p2SpellName1.text = (player2Spell3.spell_name);
+
 	}
 	
 	// Update is called once per frame
@@ -1197,83 +1238,83 @@ public class GameController : MonoBehaviour {
 
 	public void MouseHover(Button button){
 		if (button.name == "P1 Spell 1") {
-			elementText.text = ("Lightning (Fire + Light)");
-			damageText.text = (p1SpellDamage1 + " Damage");
-			mpText.text = (p1SpellCost1 + " MP");
-			bonusText.text = (" ");
-			targetText.text = "Target All";
+			elementText.text = (player1Spell1.spell_element);
+			damageText.text = (player1Spell1.spell_damage + " Damage");
+			mpText.text = (player1Spell1.spell_cost + " MP");
+			bonusText.text = (player1Spell1.spell_special + "Chance: " + player1Spell1.spell_special_chance);
+			targetText.text = "Target " + player1Spell1.spell_damage_target;
             desperationText.text = " ";
 		}
 		if (button.name == "P1 Spell 2") {
-			elementText.text = ("Fire");
-			damageText.text = (p1SpellDamage2 + " Damage");
-			mpText.text = (p1SpellCost2 + " MP");
-			bonusText.text = ("Burn Chance: 40%");
-			targetText.text = "Target One";
+			elementText.text = (player1Spell2.spell_element);
+			damageText.text = (player1Spell2.spell_damage + " Damage");
+			mpText.text = (player1Spell2.spell_cost + " MP");
+			bonusText.text = (player1Spell2.spell_special + "Chance: " + player1Spell2.spell_special_chance);
+			targetText.text = "Target " + player1Spell2.spell_damage_target;
             desperationText.text = " ";
 		}
 		if (button.name == "P1 Spell 3") {
-			elementText.text = ("Crystal (Earth + Light)");
-			damageText.text = (p1SpellDamage3 + " Damage");
-			mpText.text = (p1SpellCost3 + " MP");
-			bonusText.text = ("Extra Damage to Undead Enemies");
-			targetText.text = "Target One";
+			elementText.text = (player1Spell3.spell_element);
+			damageText.text = (player1Spell3.spell_damage + " Damage");
+			mpText.text = (player1Spell3.spell_cost + " MP");
+			bonusText.text = (player1Spell3.spell_special + "Chance: " + player1Spell3.spell_special_chance);
+			targetText.text = "Target " + player1Spell3.spell_damage_target;
             desperationText.text = " ";
 		}
 		if (button.name == "P1 Spell Basic") {
-			elementText.text = ("None");
-			damageText.text = ("5 Damage");
-			mpText.text = ("0 MP");
-			bonusText.text = (" ");
-			targetText.text = "Target One";
+			elementText.text = (player1Spell0.spell_element);
+			damageText.text = (player1Spell0.spell_damage + " Damage");
+			mpText.text = (player1Spell0.spell_cost + " MP");
+			bonusText.text = (player1Spell0.spell_special + "Chance: " + player1Spell0.spell_special_chance);
+			targetText.text = "Target " + player1Spell0.spell_damage_target;
             desperationText.text = "Basic Spell:";
 		}
 		if (button.name == "P1 Spell Desperation") {
-			elementText.text = ("Water");
-			damageText.text = (p1SpellDamage4 + " Damage");
-			mpText.text = ("All MP");
-			bonusText.text = (" ");
-			targetText.text = "Target One";
+			elementText.text = (player1Spell4.spell_element);
+			damageText.text = (player1Spell4.spell_damage + " Damage");
+			mpText.text = (player1Spell4.spell_cost + " MP");
+			bonusText.text = (player1Spell4.spell_special + "Chance: " + player1Spell4.spell_special_chance);
+			targetText.text = "Target " + player1Spell4.spell_damage_target;
             desperationText.text = "Desperation Spell:";
 		}
 		if (button.name == "P2 Spell 1") {
-			elementText.text = ("Magma (Fire + Earth)");
-			damageText.text = (p2SpellDamage1 + " Damage");
-			mpText.text = (p2SpellCost1 + " MP");
-			bonusText.text = ("Burn Chance: 10%");
-			targetText.text = "Target All";
-            desperationText.text = " ";
+			elementText.text = (player2Spell1.spell_element);
+			damageText.text = (player2Spell1.spell_damage + " Damage");
+			mpText.text = (player2Spell1.spell_cost + " MP");
+			bonusText.text = (player2Spell1.spell_special + "Chance: " + player2Spell1.spell_special_chance);
+			targetText.text = "Target " + player2Spell1.spell_damage_target;
+			desperationText.text = " ";
 		}
 		if (button.name == "P2 Spell 2") {
-			elementText.text = ("Ice (Water + Dark)");
-			damageText.text = (p2SpellDamage2 + " Damage");
-			mpText.text = (p2SpellCost2 + " MP");
-			bonusText.text = ("Freeze Chance: 25%");
-			targetText.text = "Target One";
-            desperationText.text = " ";
+			elementText.text = (player2Spell2.spell_element);
+			damageText.text = (player2Spell2.spell_damage + " Damage");
+			mpText.text = (player2Spell2.spell_cost + " MP");
+			bonusText.text = (player2Spell2.spell_special + "Chance: " + player2Spell2.spell_special_chance);
+			targetText.text = "Target " + player2Spell2.spell_damage_target;
+			desperationText.text = " ";
 		}
 		if (button.name == "P2 Spell 3") {
-			elementText.text = ("Life (Water + Earth)");
-			damageText.text = (p2SpellDamage3 + " Damage");
-			mpText.text = (p2SpellCost3 + " MP");
-			bonusText.text = ("Heal 25% of Damage Dealt");
+			elementText.text = (player2Spell3.spell_element);
+			damageText.text = (player2Spell3.spell_damage + " Damage");
+			mpText.text = (player2Spell3.spell_cost + " MP");
+			bonusText.text = (player2Spell3.spell_special + "Chance: " + player2Spell3.spell_special_chance);
             desperationText.text = " ";
 		}
 		if (button.name == "P2 Spell Desperation") {
-			elementText.text = ("Cosmic (Air + Light)");
-			damageText.text = (p2SpellDamage4 + " Damage");
-			mpText.text = ("All MP");
-			bonusText.text = ("Extra Damage to Undead Enemies");
-			targetText.text = "Target One";
-            desperationText.text = "Desperation Spell:";
+			elementText.text = (player2Spell4.spell_element);
+			damageText.text = (player2Spell4.spell_damage + " Damage");
+			mpText.text = (player2Spell4.spell_cost + " MP");
+			bonusText.text = (player2Spell4.spell_special + "Chance: " + player2Spell4.spell_special_chance);
+			targetText.text = "Target " + player2Spell4.spell_damage_target;
+			desperationText.text = "Desperation Spell:";
 		}
 		if (button.name == "P2 Spell Basic") {
-			elementText.text = ("None");
-			damageText.text = ("5 Damage");
-			mpText.text = ("0 MP");
-			bonusText.text = (" ");
-			targetText.text = "Target One";
-            desperationText.text = "Basic Spell:";
+			elementText.text = (player2Spell0.spell_element);
+			damageText.text = (player2Spell0.spell_damage + " Damage");
+			mpText.text = (player2Spell0.spell_cost + " MP");
+			bonusText.text = (player2Spell0.spell_special + "Chance: " + player2Spell0.spell_special_chance);
+			targetText.text = "Target " + player2Spell0.spell_damage_target;
+			desperationText.text = "Basic Spell:";
 		}
 	}
 
@@ -1323,84 +1364,94 @@ public class GameController : MonoBehaviour {
 	public void ChooseSpell(Button button){
 		if (button.name == "P1 Spell 1") {
 			spellDamage1 = p1SpellDamage1;
+			healingPercent1 = player1Spell1.spell_healing_percent;
 			mpCost1 = p1SpellCost1;
-			p1SpellTarget = "All";
-			spellSpecial1 = null;
-			specialChance1 = -1.0f;
+			p1SpellTarget = player1Spell1.spell_damage_target;
+			spellSpecial1 = player1Spell1.spell_special;
+			specialChance1 = player1Spell1.spell_special_chance;
 			ChangePhase ();
 		}
 		if (button.name == "P1 Spell 2") {
 			spellDamage1 = p1SpellDamage2;
+			healingPercent1 = player1Spell2.spell_healing_percent;
 			mpCost1 = p1SpellCost2;
-			p1SpellTarget = "One";
-			spellSpecial1 = "Burn";
-			specialChance1 = 0.4f;
+			p1SpellTarget = player1Spell2.spell_damage_target;
+			spellSpecial1 = player1Spell2.spell_special;
+			specialChance1 = player1Spell2.spell_special_chance;
 			ChangePhase ();
 		}
 		if (button.name == "P1 Spell 3") {
 			spellDamage1 = p1SpellDamage3;
+			healingPercent1 = player1Spell3.spell_healing_percent;
 			mpCost1 = p1SpellCost3;
-			p1SpellTarget = "One";
-			spellSpecial1 = "Undead";
-			specialChance1 = 1.0f;
+			p1SpellTarget = player1Spell3.spell_damage_target;
+			spellSpecial1 = player1Spell3.spell_special;
+			specialChance1 = player1Spell3.spell_special_chance;
 			ChangePhase ();
 		}
 		if (button.name == "P1 Spell Basic") {
-			spellDamage1 = 5;
-			mpCost1 = 0;
-			p1SpellTarget = "One";
-			spellSpecial1 = null;
-			specialChance1 = -1.0f;
+			spellDamage1 = player1Spell0.spell_damage;
+			healingPercent1 = player1Spell0.spell_healing_percent;
+			mpCost1 = player1Spell0.spell_cost;
+			p1SpellTarget = player1Spell0.spell_damage_target;
+			spellSpecial1 = player1Spell0.spell_special;
+			specialChance1 = player1Spell0.spell_special_chance;
 			ChangePhase ();
 		}
 		if (button.name == "P1 Spell Desperation") {
 			spellDamage1 = p1SpellDamage4;
-			mpCost1 = 9999;
-			p1SpellTarget = "One";
-			spellSpecial1 = null;
-			specialChance1 = -1.0f;
+			healingPercent1 = player1Spell4.spell_healing_percent;
+			mpCost1 = player1Spell4.spell_cost;
+			p1SpellTarget = player1Spell4.spell_damage_target;
+			spellSpecial1 = player1Spell4.spell_special;
+			specialChance1 = player1Spell4.spell_special_chance;
 			desperationUsed1 = true;
 			p1Tired = 2;
 			ChangePhase ();
 		}
 		if (button.name == "P2 Spell 1") {
 			spellDamage2 = p2SpellDamage1;
+			healingPercent2 = player2Spell1.spell_healing_percent;
 			mpCost2 = p2SpellCost1;
-			p2SpellTarget = "All";
-			spellSpecial2 = "Burn";
-			specialChance2 = 0.10f;
+			p2SpellTarget = player2Spell1.spell_damage_target;
+			spellSpecial2 = player2Spell1.spell_special;
+			specialChance2 = player2Spell1.spell_special_chance;
 			ChangePhase ();
 		}
 		if (button.name == "P2 Spell 2") {
 			spellDamage2 = p2SpellDamage2;
+			healingPercent2 = player2Spell2.spell_healing_percent;
 			mpCost2 = p2SpellCost2;
-			p2SpellTarget = "One";
-			spellSpecial2 = "Freeze";
-			specialChance2 = 0.25f;
+			p2SpellTarget = player2Spell2.spell_damage_target;
+			spellSpecial2 = player2Spell2.spell_special;
+			specialChance2 = player2Spell2.spell_special_chance;
 			ChangePhase ();
 		}
 		if (button.name == "P2 Spell 3") {
 			spellDamage2 = p2SpellDamage3;
+			healingPercent2 = player2Spell3.spell_healing_percent;
 			mpCost2 = p2SpellCost3;
-			p2SpellTarget = "One";
-			spellSpecial2 = "Heal";
-			specialChance2 = 1.0f;
+			p2SpellTarget = player2Spell3.spell_damage_target;
+			spellSpecial2 = player2Spell3.spell_special;
+			specialChance2 = player2Spell3.spell_special_chance;
 			ChangePhase ();
 		}
 		if (button.name == "P2 Spell Basic") {
-			spellDamage2 = 5;
-			mpCost2 = 0;
-			p2SpellTarget = "One";
-			spellSpecial2 = null;
-			specialChance2 = -1.0f;
+			spellDamage2 = player2Spell0.spell_damage;
+			healingPercent2 = player2Spell0.spell_healing_percent;
+			mpCost2 = player2Spell0.spell_cost;
+			p2SpellTarget = player2Spell0.spell_damage_target;
+			spellSpecial2 = player2Spell0.spell_special;
+			specialChance2 = player2Spell0.spell_special_chance;
 			ChangePhase ();
 		}
 		if (button.name == "P2 Spell Desperation") {
 			spellDamage2 = p2SpellDamage4;
-			mpCost2 = 9999;
-			p2SpellTarget = "One";
-			spellSpecial2 = "Undead";
-			specialChance2 = 1.0f;
+			healingPercent2 = player2Spell4.spell_healing_percent;
+			mpCost2 = player2Spell4.spell_cost;
+			p2SpellTarget = player2Spell4.spell_damage_target;
+			spellSpecial2 = player2Spell4.spell_special;
+			specialChance2 = player2Spell4.spell_special_chance;
 			p2Tired = 2;
 			desperationUsed2 = true;
 			ChangePhase ();

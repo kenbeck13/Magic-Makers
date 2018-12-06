@@ -26,6 +26,8 @@ public class SpellCreationController : MonoBehaviour {
 
     public SpellInfo spellInfo;
 
+	public ItemSlot[] cauldronItems;
+
 	// Use this for initialization
 	void Start () {
         player1Spell0 = new Spell();
@@ -55,4 +57,10 @@ public class SpellCreationController : MonoBehaviour {
         spellToFinish.spell_special = spell_special;
         spellToFinish.isDesperation = isDesperation;
     }
+
+	void FinalDamageTotal(){
+		for (int i = 0; i < cauldronItems.Length; i++) {
+			Ingredient cauldronIngredient = cauldronItems [i].ingredients;
+		}
+	}
 }

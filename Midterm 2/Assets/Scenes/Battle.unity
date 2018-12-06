@@ -290,6 +290,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d677792af4e3f784da2751ce471997c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player1Spell0: {fileID: 0}
+  player1Spell1: {fileID: 0}
+  player1Spell2: {fileID: 0}
+  player1Spell3: {fileID: 0}
+  player1Spell4: {fileID: 0}
+  player2Spell0: {fileID: 0}
+  player2Spell1: {fileID: 0}
+  player2Spell2: {fileID: 0}
+  player2Spell3: {fileID: 0}
+  player2Spell4: {fileID: 0}
+  spellInfoObject: {fileID: 0}
   chooseSpellP1: {fileID: 1279876653}
   chooseSpellP2: {fileID: 171799837}
   chooseTargetP1: {fileID: 1364825541}
@@ -335,6 +346,14 @@ MonoBehaviour:
   finalText: {fileID: 478595138}
   targetText: {fileID: 1012138191}
   desperationText: {fileID: 689693030}
+  p1SpellName1: {fileID: 1337490520}
+  p1SpellName2: {fileID: 1093358518}
+  p1SpellName3: {fileID: 1169810085}
+  p1SpellName4: {fileID: 1224605182}
+  p2SpellName1: {fileID: 2079282087}
+  p2SpellName2: {fileID: 1789890743}
+  p2SpellName3: {fileID: 116324839}
+  p2SpellName4: {fileID: 1387265924}
   p1spell1: {fileID: 854413626}
   p1spell2: {fileID: 1167991486}
   p1spell3: {fileID: 940094471}
@@ -357,20 +376,20 @@ MonoBehaviour:
   enemy1MaxHP: 40
   enemy2MaxHP: 50
   enemy3MaxHP: 60
-  p1SpellCost1: 6
-  p1SpellCost2: 7
-  p1SpellCost3: 8
-  p2SpellCost1: 6
-  p2SpellCost2: 7
-  p2SpellCost3: 8
-  p1SpellDamage1: 5
-  p1SpellDamage2: 15
-  p1SpellDamage3: 20
-  p1SpellDamage4: 40
-  p2SpellDamage1: 5
-  p2SpellDamage2: 15
-  p2SpellDamage3: 20
-  p2SpellDamage4: 35
+  p1SpellCost1: 0
+  p1SpellCost2: 0
+  p1SpellCost3: 0
+  p2SpellCost1: 0
+  p2SpellCost2: 0
+  p2SpellCost3: 0
+  p1SpellDamage1: 0
+  p1SpellDamage2: 0
+  p1SpellDamage3: 0
+  p1SpellDamage4: 0
+  p2SpellDamage1: 0
+  p2SpellDamage2: 0
+  p2SpellDamage3: 0
+  p2SpellDamage4: 0
   enemyType1: Undead
   enemyType2: None
   enemyType3: None
@@ -964,7 +983,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1228,7 +1247,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.27875, y: 0.41881785}
   m_AnchorMax: {x: 0.37750003, y: 0.46263558}
-  m_AnchoredPosition: {x: -0.5, y: 2.4000149}
+  m_AnchoredPosition: {x: -0.5, y: 2.4000168}
   m_SizeDelta: {x: 81, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &404532610
@@ -5929,7 +5948,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6602,7 +6621,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.13700001, y: 0.0648178}
   m_AnchorMax: {x: 0.35150003, y: 0.1142712}
-  m_AnchoredPosition: {x: -49.499924, y: 21.299973}
+  m_AnchoredPosition: {x: -49.49994, y: 21.299927}
   m_SizeDelta: {x: 170, y: 23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1631112186
@@ -7065,7 +7084,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
