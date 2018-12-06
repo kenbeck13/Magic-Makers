@@ -14,11 +14,11 @@ public class CauldronSlot : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-//		if (currentIngredient != null) {
-//			rend.enabled = true;
-//			rend.sprite = currentIngredient.itemSprite;
-//		} else {
-//			rend.enabled = false;
-//		}
+		if (currentIngredient != null) {
+			rend.enabled = true;
+			rend.sprite = currentIngredient.itemSprite;
+		} else {
+			rend.enabled = false;
+		}
 	}
 }

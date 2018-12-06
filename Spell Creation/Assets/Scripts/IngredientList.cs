@@ -122,10 +122,10 @@ public class IngredientList : MonoBehaviour {
 		skyRock.specialBonusValue = 1.3225f;
 		//skyRock.itemSprite = sprites [13];
 
-		iceEssence.itemName = "Sky Rock";
+		iceEssence.itemName = "Ice Essence";
 		iceEssence.mpCostMultiplier = 1.0f;
 		iceEssence.damageMultiplier = 1.0f;
-		iceEssence.specialBonus = "Remove Burn Ice Damage";
+		iceEssence.specialBonus = "Remove Burn Ice Damage Freeze Chance";
 		iceEssence.specialBonusValue = 1.520875f;
 		//iceEssence.itemSprite = sprites [14];
 	}

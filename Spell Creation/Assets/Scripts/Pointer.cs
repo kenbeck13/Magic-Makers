@@ -42,12 +42,15 @@ public class Pointer : MonoBehaviour {
 				}
 			}
 		}
-//		if (currentIngredient != null) {
-//			rend.enabled = true;
-//			rend.sprite = currentIngredient.itemSprite;
-//		} else {
-//			rend.enabled = false;
-//		}
+		if (currentIngredient != null) {
+			rend.enabled = true;
+			rend.sprite = currentIngredient.itemSprite;
+		} else {
+			rend.enabled = false;
+		}
+
+		Debug.Log (currentIngredient.itemName);
+
 
 		Vector2 mousePos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 		transform.position = mousePos;

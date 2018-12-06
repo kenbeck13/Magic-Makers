@@ -20,7 +20,7 @@ public class ItemSlot : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		amountText.text = amount + "x";
-		//rend.sprite = currentIngredient.itemSprite;
+		rend.sprite = currentIngredient.itemSprite;
 
 
 	}
